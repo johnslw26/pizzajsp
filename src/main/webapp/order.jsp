@@ -21,6 +21,15 @@
         <p>Size = ${param.size}</p>
         <p>Crust = ${param.crust}</p>
         
+        <!-- 
+            The following starts the jsp integration into html. jsp uses special syntax to denote whether it should be compiled and ran as java or html.
+        it uses the left angle bracket and a percent sign to initiate the block and a percent right angle bracket to close it. The following code defines
+        a double variable so that the cost can include a decimal point. I then initiate two string variables so I don't have to keep typing in 
+        request.getParameter for the crust and size. Next I use if statements to check if the string is equal to the text "hand", "small", and "medium" etc.
+        It's good to note that you must use .equals instead of == because java will be trying to see if the crust object is equal to the "crust" string.
+        I use the built in += to increment the cost variable (same as cost = cost + N).I then output the total cost after the final bracket for the topping
+        check to display the total cost even if there aren't any toppings.
+        -->
         <p>Total Cost: <%
             double cost = 0;
             String crust = request.getParameter("crust");

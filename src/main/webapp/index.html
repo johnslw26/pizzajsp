@@ -18,6 +18,15 @@
             <input type="checkbox" name="toppings" value="mushroom">Mushroom
             <input type="checkbox" name="toppings" value="pineapple">Pineapple
             <br>
+            
+            <!--
+                The following 3 input elements add the options for Pan, Hand-Tossed, and Thin crust. An input object can take multiple tags that define
+            what it should include. In this project I use type to define what the input type should be (button,radio,checkbox,text, etc). Next is the name
+            this is what will identify the group the following input elements belong to and what I will use to access them in the jsp file. I used crust
+            as the identifier. Value is the name of the object which will also be used to reference it using jsp, but it works on the individual level.
+            Meaning each one of those can be compared in the jsp using .equals since it returns the name of the input selected. (on to jsp) 
+            -->
+            
             <input type='radio' name='crust' value="pan">Pan
             <input type='radio' name='crust' value="hand">Hand-Tossed
             <input type='radio' name='crust'value="thin" checked required>Thin
